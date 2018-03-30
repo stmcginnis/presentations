@@ -32,5 +32,5 @@
 
 @title[OpenStack Usage - Horizon]
 
-![horizon](assets/horizon.gif)
+![horizon](Vancouver2018/CinderSDS/assets/horizon.gif)
 
