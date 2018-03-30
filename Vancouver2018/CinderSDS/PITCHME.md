@@ -15,3 +15,22 @@
 
 ## What Cinder is not
 
+---
+
+@title[OpenStack Usage]
+
+## Typical OpenStack Usage
+
+- Point and click management via Horizon
+- Interactive command line with OpenStackClient
+- Programmatic access using REST API or SDK
+  - OpenStackSDK (Shade)
+  - Gophercloud
+  - etc...
+
+---
+
+@title[OpenStack Usage - Horizon]
+
+![horizon](assets/horizon.gif)
+

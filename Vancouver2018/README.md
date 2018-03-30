@@ -1,4 +1,4 @@
-# OpenStack Summit Vancouver 2018 Presentations
+# OpenStack Summit Vancouver 2018
 
 The OpenStack Summit returned to beautiful Vancouver, BC, May 21-24, 2018.
 
