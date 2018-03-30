@@ -34,3 +34,9 @@
 
 ![horizon](Vancouver2018/CinderSDS/assets/horizon.gif)
 
+---
+
+@title[OpenStack Usage - CLI]
+
+![cli](Vancouver2018/CinderSDS/assets/terminal.gif)
+
