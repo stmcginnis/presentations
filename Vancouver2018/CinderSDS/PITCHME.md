@@ -17,6 +17,22 @@
 
 ---
 
+@title[Full Deployment]
+
+### Cinder as part of an OpenStack cloud
+
+![full cloud](Vancouver2018/CinderSDS/assets/allservices.png)
+
+---
+
+@title[Standalone Deployment]
+
+### Cinder standalone for storage management
+
+![stand alone](Vancouver2018/CinderSDS/assets/standalone.png)
+
+---
+
 @title[OpenStack Usage]
 
 ## Typical OpenStack Usage
