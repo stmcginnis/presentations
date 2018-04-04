@@ -6,6 +6,7 @@ a pull request if you see anything that needs fixing!
 ## Conferences and Events
 
 * [OpenStack Summit - Vancouver 2018](Vancouver2018/README.md)
+* [OpenSDS Mini-Summmit - Copenhagen 2018](Copenhagen2018/README.md)
 
 
 > Feel free to use these presentations, in full or as a starting point for
