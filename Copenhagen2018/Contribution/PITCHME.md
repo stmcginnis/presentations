@@ -53,9 +53,9 @@
 
 ## Community Communication
 
-OpenSDS Slack Channel [https://opensds.slack.com/](https://opensds.slack.com/)
-Mailing Lists [https://lists.opensds.io/](https://lists.opensds.io/mailman/listinfo)
-GitHub Issues [https://github.com/opensds/opensds/issues](https://github.com/opensds/opensds/issues)
+@fa[slack] OpenSDS Slack Channel [https://opensds.slack.com/](https://opensds.slack.com/) <br/>
+@fa[envelope] Mailing Lists [https://lists.opensds.io/](https://lists.opensds.io/mailman/listinfo) <br/>
+@fa[github] GitHub Issues [https://github.com/opensds/opensds/issues](https://github.com/opensds/opensds/issues)
 
 ---
 
