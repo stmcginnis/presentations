@@ -65,7 +65,7 @@
 
 ## OpenSDS Meetings
 
-Technical meetings held every other Tuesday and Thursday.
+Technical meetings weekly
 
 - Tuesdays, 12pm Eastern US time
 - Thursdays, 8pm Eastern US time
@@ -73,8 +73,8 @@ Technical meetings held every other Tuesday and Thursday.
 <span style="font-size:0.6em; color:gray">Meetings held using Zoom for audio
 and video.</span>
 <br/>
-See https://github.com/opensds/opensds/blob/master/COMMUNITY.md for more
-details.
+<span style=font-size:0.6em">See https://github.com/opensds/opensds/blob/master/COMMUNITY.md for more
+details.</span>
 
 ---
 
@@ -87,7 +87,7 @@ Design specification submitted as a pull request to opensds/design-specs repo.
 Pull request used to discuss design decision and clarify plan.
 <br/>
 <br/>
-@fs[github]
+@fa[github]
 [https://github.com/opensds/design-specs](https://github.com/opensds/design-specs)
 
 ---
