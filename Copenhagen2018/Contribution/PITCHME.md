@@ -5,7 +5,7 @@
 
 <hr/>
 @fa[globe] www.opensds.io <br/>
-@fa[envelope] info@opensds.io <br/>
+@fa[slack] opensds.slack.com <br/>
 @fa[twitter] @opensds_io
 
 ---
