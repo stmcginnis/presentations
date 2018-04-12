@@ -3,6 +3,11 @@
 # OpenSDS Contribution
 ## Workflow and tips and tricks
 
+<hr/>
+@fa[globe] www.opensds.io
+@fa[envelope] info@opensds.io
+@fa[twitter] @opensds_io
+
 ---
 
 @title[Overview]
