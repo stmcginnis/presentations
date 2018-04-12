@@ -34,7 +34,7 @@
 
 @title[Governance Structure]
 
-## OpenSDS Governance Structure
+### OpenSDS Governance Structure
 
 ![governance](Copenhagen2018/Contribution/assets/governance.jpg)
 
