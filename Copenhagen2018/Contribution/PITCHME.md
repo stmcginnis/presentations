@@ -1,11 +1,11 @@
 @title[Introduction]
 
 # OpenSDS Contribution
-## Workflow and tips and tricks
+#### Workflow and tips and tricks
 
 <hr/>
-@fa[globe] www.opensds.io
-@fa[envelope] info@opensds.io
+@fa[globe] www.opensds.io <br/>
+@fa[envelope] info@opensds.io <br/>
 @fa[twitter] @opensds_io
 
 ---
