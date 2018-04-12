@@ -73,7 +73,7 @@ Technical meetings weekly
 <span style="font-size:0.6em; color:gray">Meetings held using Zoom for audio
 and video.</span>
 <br/>
-<span style=font-size:0.6em">See https://github.com/opensds/opensds/blob/master/COMMUNITY.md for more
+<span style="font-size:0.6em">See https://github.com/opensds/opensds/blob/master/COMMUNITY.md for more
 details.</span>
 
 ---
