@@ -29,6 +29,8 @@
 
 ![repos](Copenhagen2018/Contribution/assets/repos.png)
 
+@fa[github] https://github.com/opensds
+
 ---
 
 @title[Governance Structure]
