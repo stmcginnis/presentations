@@ -60,7 +60,11 @@
 ---?code=Vancouver2018/CinderSDS/assets/powershell.ps1&lang=powershell
 @title[Windows PowerShell Example]
 
-###### [https://github.com/stmcginnis/presentations/blob/master/Vancouver2018/CinderSDS/assets/powershell.ps1](https://github.com/stmcginnis/presentations/blob/master/Vancouver2018/CinderSDS/assets/powershell.ps1)
+<span style="font-size:0.5em">Full source:<br/>
+  <a
+  href="https://github.com/stmcginnis/presentations/blob/master/Vancouver2018/CinderSDS/assets/powershell.ps1">
+  https://github.com/stmcginnis/presentations/blob/master/Vancouver2018/CinderSDS/assets/powershell.ps1</a>
+</span>
 
 ---
 @title[Windows PowerShell - Authentication]
