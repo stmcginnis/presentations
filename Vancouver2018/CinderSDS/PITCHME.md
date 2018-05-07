@@ -94,12 +94,12 @@ $result = Invoke-WebRequest -Headers $headers -Method Post -Body @"
 "@ -Uri http://192.168.1.230:5000/v3/auth/tokens
 ```
 
-@[1] Using Invoke-WebReqeuest to make REST call
-@[3-4] Provide authentication information
-@[5] Using password auth
-@[6-11] Pass in credentials
-@[14-18] Provide the desired scope for the auth token
-@[22] POST against the auth token URI
+@[1](Using Invoke-WebReqeuest to make REST call)
+@[3-4](Provide authentication information)
+@[5](Using password auth)
+@[6-11](Pass in credentials)
+@[14-18](Provide the desired scope for the auth token)
+@[22](POST against the auth token URI)
 
 ---
 @title[Windows PowerShell - Authentication]
@@ -122,8 +122,8 @@ foreach($vol in $result.volumes) {
 }
 ```
 
-@[1-2] Invoke-RestMethod to simplify calls
-@[4] Easy access to JSON results
+@[1-2](Invoke-RestMethod to simplify calls)
+@[4](Easy access to JSON results)
 
 ---
 @title[Windows PowerShell - Performing Actions]
@@ -138,4 +138,34 @@ $result = Invoke-RestMethod -Headers $headers -Method Post -Body @"
 "@ -Uri "http://192.168.1.230:8776/v3/$project_id/volumes"
 ```
 
-@[3-5] Power JSON body for requested action
+@[3-5](Provide JSON body for requested action)
+
+---
+@title[OpenStackSDK]
+
+### OpenStackSDK
+
+#### shade
+#### os-client-config
+#### python-openstacksdk
+
+---
+@title[OpenStackSDK - clouds.yaml]
+
+```yaml
+clouds:
+ test-lab:
+   region_name: test_lab
+   auth:
+     username: 'autovonbot'
+     password: password1
+     project_name: 'IT'
+     auth_url: 'https://identity.example.com'
+```
+
+#### clouds.yaml is cool!
+
+```python
+connection = openstack.connect(cloud='test-lab')
+```
+
