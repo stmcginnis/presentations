@@ -143,7 +143,7 @@ $result = Invoke-RestMethod -Headers $headers -Method Post -Body @"
 ---
 @title[OpenStackSDK]
 
-### OpenStackSDK
+## OpenStackSDK
 
 #### shade
 #### os-client-config
@@ -151,6 +151,8 @@ $result = Invoke-RestMethod -Headers $headers -Method Post -Body @"
 
 ---
 @title[OpenStackSDK - clouds.yaml]
+
+#### clouds.yaml is cool!
 
 ```yaml
 clouds:
@@ -160,12 +162,60 @@ clouds:
      username: 'autovonbot'
      password: password1
      project_name: 'IT'
-     auth_url: 'https://identity.example.com'
+     auth_url: 'http://192.168.1.230/identity/'
 ```
-
-#### clouds.yaml is cool!
 
 ```python
 connection = openstack.connect(cloud='test-lab')
 ```
 
+---
+@title[OpenStackSDK - Scenario]
+
+## Scenario
+
+#### OS gold image system disk
+#### Clone gold image
+#### Boot from SAN
+
+---
+@title[OpenStackSDK - Create from volume]
+
+```python
+connection = openstack.connect(cloud='test-lab')
+
+volume = connection.create_volume(
+    10, name='New Boot Vol', image=image_id, wait=True)
+```
+
+@[1](Create our connection)
+@[3-4](Create a new volume from Glance image)
+
+---
+@title['Auto Extend Scenario']
+
+## Automatic Volume Extension
+
+#### Local script schedule to run periodically
+#### Check for volume space consumption
+#### If low, automatically extend volume
+
+---
+@title['Auto Extend Script']
+
+```bash
+stats=`df -H / | tail -1`
+
+size=`echo $stats | awk '{print $2} | sed -e "s/G//"`
+used=`echo $stats | awk '{print $5}' | sed -e "s/\%//"`
+
+if [ $used -gt 90 ]; then
+    # Need to extend the volume
+    openstack volume extend MyDataVol 100
+
+    # Resize the local volume
+    diskutil cs resizeStack d3eaf95e-e2e0-4410-9c96-6f093f91407a 200
+
+fi
+```
+```
