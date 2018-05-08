@@ -57,15 +57,6 @@
 
 ![cli](Vancouver2018/CinderSDS/assets/terminal.gif)
 
----?code=Vancouver2018/CinderSDS/assets/powershell.ps1&lang=powershell
-@title[Windows PowerShell Example]
-
-<span style="font-size:0.5em">Full source:<br/>
-  <a
-  href="https://github.com/stmcginnis/presentations/blob/master/Vancouver2018/CinderSDS/assets/powershell.ps1">
-  https://github.com/stmcginnis/presentations/blob/master/Vancouver2018/CinderSDS/assets/powershell.ps1</a>
-</span>
-
 ---
 @title[Windows PowerShell - Scenario]
 
@@ -74,6 +65,15 @@
 #### Production Database remains untouched
 #### Need to run local tests against real data
 #### Create volume from snapshot of data
+
+---?code=Vancouver2018/CinderSDS/assets/powershell.ps1&lang=powershell
+@title[Windows PowerShell Example]
+
+<span style="font-size:0.5em">Full source:<br/>
+  <a
+  href="https://github.com/stmcginnis/presentations/blob/master/Vancouver2018/CinderSDS/assets/powershell.ps1">
+  https://github.com/stmcginnis/presentations/blob/master/Vancouver2018/CinderSDS/assets/powershell.ps1</a>
+</span>
 
 ---
 @title[Windows PowerShell - Authentication]
@@ -247,7 +247,7 @@ volume = connection.create_volume(
 ---
 @title['Auto Extend Scenario']
 
-## Automatic Volume Extension
+## Scenario
 
 #### Local script schedule to run periodically
 #### Check for volume space consumption
@@ -278,3 +278,51 @@ fi
 @[8](Check if we have gone past 90% consumption)
 @[9-10](Use CLI to extend the volume)
 
+---
+@title[Ansible]
+
+### Config Management Integration
+
+#### Ansible
+#### Puppet
+#### Chef
+
+---
+@title[Ansible - Scenario]
+
+## Scenario
+
+#### Managing system configurations
+#### Need to include standard storage configuration
+#### Ansible playbook configures volumes through Cinder
+
+---
+@title[Ansible - Task]
+
+```yaml
+- name: create data volume
+  hosts: localhost
+  tasks:
+  - name: Create 100g volume
+    os_volume:
+      state: present
+      cloud: test-lab
+      size: 100
+      display_name: {{ ansible_hostname }} Data Vol
+```
+
+@[4]
+@[5](os_volume manages Cinder volumes)
+@[6](state: present ensures the volume is created)
+@[8-9](Takes values for the volume properties)
+
+---
+@title[References]
+
+### References
+
+[https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod)
+[https://docs.openstack.org/python-openstackclient/](https://docs.openstack.org/python-openstackclient/)
+[https://docs.openstack.org/openstacksdk/](https://docs.openstack.org/openstacksdk/)
+[http://docs.ansible.com/ansible/latest/modules/os_volume_module.html](http://docs.ansible.com/ansible/latest/modules/os_volume_module.html)
+[https://developer.openstack.org/api-ref/block-storage/](https://developer.openstack.org/api-ref/block-storage/)
