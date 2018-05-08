@@ -321,8 +321,20 @@ fi
 
 ### References
 
+<span style="font-size:0.6em">
 [https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod)
 [https://docs.openstack.org/python-openstackclient/](https://docs.openstack.org/python-openstackclient/)
 [https://docs.openstack.org/openstacksdk/](https://docs.openstack.org/openstacksdk/)
 [http://docs.ansible.com/ansible/latest/modules/os_volume_module.html](http://docs.ansible.com/ansible/latest/modules/os_volume_module.html)
 [https://developer.openstack.org/api-ref/block-storage/](https://developer.openstack.org/api-ref/block-storage/)
+</span>
+
+---
+@title[Thanks]
+
+### Thank You!
+
+<hr/>
+Please share your experience and use cases.
+
+@fa[twitter] @SeanTMcGinnis
