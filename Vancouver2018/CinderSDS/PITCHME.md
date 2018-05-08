@@ -323,9 +323,13 @@ fi
 
 <span style="font-size:0.6em">
 [https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod)
+<br/>
 [https://docs.openstack.org/python-openstackclient/](https://docs.openstack.org/python-openstackclient/)
+<br/>
 [https://docs.openstack.org/openstacksdk/](https://docs.openstack.org/openstacksdk/)
+<br/>
 [http://docs.ansible.com/ansible/latest/modules/os_volume_module.html](http://docs.ansible.com/ansible/latest/modules/os_volume_module.html)
+<br/>
 [https://developer.openstack.org/api-ref/block-storage/](https://developer.openstack.org/api-ref/block-storage/)
 </span>
 
