@@ -67,6 +67,15 @@
 </span>
 
 ---
+@title[Windows PowerShell - Scenario]
+
+## Scenario
+
+#### Production Database remains untouched
+#### Need to run local tests against real data
+#### Create volume from snapshot of data
+
+---
 @title[Windows PowerShell - Authentication]
 
 ```powershell
@@ -141,6 +150,50 @@ $result = Invoke-RestMethod -Headers $headers -Method Post -Body @"
 @[3-5](Provide JSON body for requested action)
 
 ---
+@title[Windows PowerShell - Attachment]
+
+```powershell
+-Uri "http://192.168.1.230:8776/v3/$project_id/attachments"
+
+$attachment = $result.attachment
+
+$connection_info = $attachment.connection_info
+```
+
+@[1](Attachment API can be used...)
+@[5](...to get iSCSI connection info)
+
+---
+@title[Windows PowerShell - Connect]
+
+```powershell
+foreach($target in $connection_info.target_portals) {
+    $tgt_ip, $tgt_port = $target.split(':')
+    $portals += New-IscsiTargetPortal -TargetPortalAddress $tgt_ip \
+        -TargetPortalPortNumber $tgt_port
+}
+```
+
+@[3-4](Connection can be made to storage)
+
+---
+@title[Windows PowerShell - Access Data]
+
+```powershell
+$volume = Get-Volume -FileSystemLabel "SQLData"
+$mdf = "$($volume.DriveLetter)\Data\MyDB.mdf"
+$ldf = "$($volume.DriveLetter)\Data\MyDB.ldf"
+
+Invoke-Sqlcmd @"
+USE [master]
+CREATE DATABASE [MyDB] ON (FILENAME = '$mdf'), (FILENAME = '$ldf') FOR ATTACH
+"@ -QueryTimeout 3600 -ServerInstance 'Local-Instance'
+```
+
+@[1](Local volume can then be used...)
+@[5-8](...to mount and access the data)
+
+---
 @title[OpenStackSDK]
 
 ## OpenStackSDK
@@ -204,18 +257,24 @@ volume = connection.create_volume(
 @title['Auto Extend Script']
 
 ```bash
-stats=`df -H / | tail -1`
+. ~/os_creds.rc
 
-size=`echo $stats | awk '{print $2} | sed -e "s/G//"`
+stats=`df -H /SanVol | tail -1`
+
+size=`echo $stats | awk '{print $2}' | sed -e "s/G//"`
 used=`echo $stats | awk '{print $5}' | sed -e "s/\%//"`
 
 if [ $used -gt 90 ]; then
     # Need to extend the volume
-    openstack volume extend MyDataVol 100
+    openstack volume extend MyDataVol $(($size + 10))
 
     # Resize the local volume
     diskutil cs resizeStack d3eaf95e-e2e0-4410-9c96-6f093f91407a 200
-
 fi
 ```
-```
+
+@[1](Source the credentials so we don't have to include them in script)
+@[3-6](Parse out volume space information)
+@[8](Check if we have gone past 90% consumption)
+@[9-10](Use CLI to extend the volume)
+
