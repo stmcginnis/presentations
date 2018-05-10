@@ -4,19 +4,16 @@
 ## It's not just for breakfast anymore
 
 ---
-
 @title[What is Cinder]
 
 ## What is Cinder
 
 ---
-
 @title[What Cinder is Not]
 
 ## What Cinder is not
 
 ---
-
 @title[Full Deployment]
 
 ### Cinder as part of an OpenStack cloud
@@ -24,15 +21,41 @@
 ![full cloud](Vancouver2018/CinderSDS/assets/allservices.png)
 
 ---
-
 @title[Standalone Deployment]
 
-### Cinder standalone for storage management
+### Cinder standalone
 
 ![stand alone](Vancouver2018/CinderSDS/assets/standalone.png)
 
 ---
+@title[Standalone Deployment]
 
+### Cinder standalone - noauth
+
+![stand alone](Vancouver2018/CinderSDS/assets/standalone-noauth.png)
+
+```ini
+auth_strategy = noauth
+```
+
+---
+@title[Deployment Options - References]
+
+### References
+
+<span style="font-size:0.6em">
+[https://docs.openstack.org/cinder/latest/install/](https://docs.openstack.org/cinder/latest/install/)
+<br/>
+[https://www.youtube.com/watch?v=YmeGEBVuSNc](https://www.youtube.com/watch?v=YmeGEBVuSNc)
+<br/>
+[https://thenewstack.io/deploying-cinder-stand-alone-storage-service/](https://thenewstack.io/deploying-cinder-stand-alone-storage-service/)
+<br/>
+[https://github.com/openstack/cinder/blob/master/contrib/block-box/README.md](https://github.com/openstack/cinder/blob/master/contrib/block-box/README.md)
+<br/>
+[https://gorka.eguileor.com/standalone-cinder/](https://gorka.eguileor.com/standalone-cinder/)
+</span>
+
+---
 @title[OpenStack Usage]
 
 ## Typical OpenStack Usage
@@ -46,13 +69,11 @@
 - Integration with config management
 
 ---
-
 @title[OpenStack Usage - Horizon]
 
 ![horizon](Vancouver2018/CinderSDS/assets/horizon.gif)
 
 ---
-
 @title[OpenStack Usage - CLI]
 
 ![cli](Vancouver2018/CinderSDS/assets/terminal.gif)
@@ -65,6 +86,20 @@
 #### Production Database remains untouched
 #### Need to run local tests against real data
 #### Create volume from snapshot of data
+
+---
+@title[Windows PowerShell - Setup]
+
+## Setup
+
+#### Services Used
+Cinder, Keystone (optional)
+
+#### Platform
+Windows, SQL Server, PowerShell
+
+#### Example
+Direct REST API usage
 
 ---?code=Vancouver2018/CinderSDS/assets/powershell.ps1&lang=powershell
 @title[Windows PowerShell Example]
@@ -194,6 +229,17 @@ CREATE DATABASE [MyDB] ON (FILENAME = '$mdf'), (FILENAME = '$ldf') FOR ATTACH
 @[5-8](...to mount and access the data)
 
 ---
+@title[Windows PowerShell - References]
+
+### References
+
+<span style="font-size:0.6em">
+[https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod)
+<br/>
+[https://developer.openstack.org/api-ref/block-storage/](https://developer.openstack.org/api-ref/block-storage/)
+</span>
+
+---
 @title[OpenStackSDK]
 
 ## OpenStackSDK
@@ -232,6 +278,20 @@ connection = openstack.connect(cloud='test-lab')
 #### Boot from SAN
 
 ---
+@title[OpenStackSDK - Setup]
+
+## Setup
+
+#### Services Used
+Cinder, Keystone, Glance
+
+#### Platform
+Baremetal or externally provisioned hosts
+
+#### Example
+Programmatic SDK usage
+
+---
 @title[OpenStackSDK - Create from volume]
 
 ```python
@@ -254,6 +314,20 @@ volume = connection.create_volume(
 #### If low, automatically extend volume
 
 ---
+@title[Auto Extend - Setup]
+
+## Setup
+
+#### Services Used
+Cinder, Keystone
+
+#### Platform
+Baremetal or VM
+
+#### Example
+Scripted CLI usage
+
+---
 @title['Auto Extend Script']
 
 ```bash
@@ -269,7 +343,7 @@ if [ $used -gt 90 ]; then
     openstack volume extend MyDataVol $(($size + 10))
 
     # Resize the local volume
-    diskutil cs resizeStack d3eaf95e-e2e0-4410-9c96-6f093f91407a 200
+    diskutil cs resizeStack d3eaf95e-e2e0-4410-9c96-6f093f91407a $(($size +10))
 fi
 ```
 
@@ -277,6 +351,7 @@ fi
 @[3-6](Parse out volume space information)
 @[8](Check if we have gone past 90% consumption)
 @[9-10](Use CLI to extend the volume)
+@[12-13](Resize local filesystem if needed)
 
 ---
 @title[Ansible]
@@ -322,7 +397,6 @@ fi
 ### References
 
 <span style="font-size:0.6em">
-[https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod)
 <br/>
 [https://docs.openstack.org/python-openstackclient/](https://docs.openstack.org/python-openstackclient/)
 <br/>
@@ -330,7 +404,6 @@ fi
 <br/>
 [http://docs.ansible.com/ansible/latest/modules/os_volume_module.html](http://docs.ansible.com/ansible/latest/modules/os_volume_module.html)
 <br/>
-[https://developer.openstack.org/api-ref/block-storage/](https://developer.openstack.org/api-ref/block-storage/)
 </span>
 
 ---
