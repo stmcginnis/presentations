@@ -430,6 +430,24 @@ Configuration management using Ansible
 @[8-9](Takes values for the volume properties)
 
 ---
+@title[Ansible - Mount]
+
+```yaml
+- parted:
+    device: /dev/sdb
+    number: 1
+    state: present
+- filesystem:
+    fstype: ext4
+    dev: /dev/sdb1
+- mount:
+    path: /data
+    src: UUID=c3f48145-fa3b-4bbe-a700-a2a179ec9077
+    fstype: ext4
+    state: present
+```
+
+---
 @title[References]
 
 ### References
