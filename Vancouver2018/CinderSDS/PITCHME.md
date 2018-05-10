@@ -305,11 +305,26 @@ volume = connection.create_volume(
 @[3-4](Create a new volume from Glance image)
 
 ---
+@title[OpenStackSDK - References]
+
+### References
+
+<span style="font-size:0.6em">
+[https://docs.openstack.org/openstacksdk/](https://docs.openstack.org/openstacksdk/)
+<br/>
+[http://gophercloud.io/](http://gophercloud.io/)
+<br/>
+[http://openstack4j.com/](http://openstack4j.com/)
+<br/>
+[https://openlabtesting.org/openstack-sdks/](https://openlabtesting.org/openstack-sdks/)
+</span>
+
+---
 @title['Auto Extend Scenario']
 
 ## Scenario
 
-#### Local script schedule to run periodically
+#### Local script scheduled to run periodically
 #### Check for volume space consumption
 #### If low, automatically extend volume
 
@@ -354,6 +369,15 @@ fi
 @[12-13](Resize local filesystem if needed)
 
 ---
+@title[Auto Extend - References]
+
+### References
+
+<span style="font-size:0.6em">
+[https://docs.openstack.org/python-openstackclient/](https://docs.openstack.org/python-openstackclient/)
+</span>
+
+---
 @title[Ansible]
 
 ### Config Management Integration
@@ -370,6 +394,20 @@ fi
 #### Managing system configurations
 #### Need to include standard storage configuration
 #### Ansible playbook configures volumes through Cinder
+
+---
+@title[Ansible - Setup]
+
+## Setup
+
+#### Services Used
+Cinder, Keystone
+
+#### Platform
+Any Ansible supported environment
+
+#### Example
+Configuration management using Ansible
 
 ---
 @title[Ansible - Task]
@@ -397,12 +435,9 @@ fi
 ### References
 
 <span style="font-size:0.6em">
-<br/>
-[https://docs.openstack.org/python-openstackclient/](https://docs.openstack.org/python-openstackclient/)
-<br/>
-[https://docs.openstack.org/openstacksdk/](https://docs.openstack.org/openstacksdk/)
-<br/>
 [http://docs.ansible.com/ansible/latest/modules/os_volume_module.html](http://docs.ansible.com/ansible/latest/modules/os_volume_module.html)
+<br/>
+[https://www.ansible.com/](https://www.ansible.com/)
 <br/>
 </span>
 
