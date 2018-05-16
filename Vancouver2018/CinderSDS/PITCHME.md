@@ -24,6 +24,7 @@
 
 - Not a storage provider
 - Not in the IO path
+- Not an all purpose storage manager
 
 @ulend
 
