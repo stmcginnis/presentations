@@ -1,3 +1,4 @@
 theme : black
 background : assets/cinder-blocks.jpg
 highlight: idea
+remote-control: true
