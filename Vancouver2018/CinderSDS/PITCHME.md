@@ -8,10 +8,24 @@
 
 ## What is Cinder
 
+@ul
+
+- Block storage management API
+- Abstraction layer for many types of storage
+
+@ulend
+
 ---
 @title[What Cinder is Not]
 
 ## What Cinder is not
+
+@ul
+
+- Not a storage provider
+- Not in the IO path
+
+@ulend
 
 ---
 @title[Full Deployment]
@@ -56,6 +70,16 @@ auth_strategy = noauth
 </span>
 
 ---
+@title[OpenStack Usage - Horizon]
+
+![horizon](Vancouver2018/CinderSDS/assets/horizon.gif)
+
+---
+@title[OpenStack Usage - CLI]
+
+![cli](Vancouver2018/CinderSDS/assets/terminal.gif)
+
+---
 @title[OpenStack Usage]
 
 ## Typical OpenStack Usage
@@ -67,16 +91,6 @@ auth_strategy = noauth
   - Gophercloud
   - etc...
 - Integration with config management
-
----
-@title[OpenStack Usage - Horizon]
-
-![horizon](Vancouver2018/CinderSDS/assets/horizon.gif)
-
----
-@title[OpenStack Usage - CLI]
-
-![cli](Vancouver2018/CinderSDS/assets/terminal.gif)
 
 ---
 @title[Windows PowerShell - Scenario]
@@ -462,9 +476,9 @@ Configuration management using Ansible
 ---
 @title[Thanks]
 
-### Thank You!
+### Thank You
 
 <hr/>
-Please share your experience and use cases.
+Please share your experience and use cases!
 
 @fa[twitter] @SeanTMcGinnis
