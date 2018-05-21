@@ -332,6 +332,8 @@ volume = connection.create_volume(
 [http://openstack4j.com/](http://openstack4j.com/)
 <br/>
 [https://openlabtesting.org/openstack-sdks/](https://openlabtesting.org/openstack-sdks/)
+<br/>
+[https://github.com/openstack/python-brick-cinderclient-ext](https://github.com/openstack/python-brick-cinderclient-ext)
 </span>
 
 ---
