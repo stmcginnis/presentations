@@ -172,7 +172,7 @@ $headers.Add('X-Auth-Token', $os_token)
 @title[Windows PowerShell - REST Calls]
 
 ```powershell
-$result = Invoke-RestMethod -Headers $headers \
+$result = Invoke-RestMethod -Headers $headers `
     -Uri "http://192.168.1.230:8776/v3/$project_id/volumes"
 
 foreach($vol in $result.volumes) {
@@ -219,7 +219,7 @@ $connection_info = $attachment.connection_info
 ```powershell
 foreach($target in $connection_info.target_portals) {
     $tgt_ip, $tgt_port = $target.split(':')
-    $portals += New-IscsiTargetPortal -TargetPortalAddress $tgt_ip \
+    $portals += New-IscsiTargetPortal -TargetPortalAddress $tgt_ip `
         -TargetPortalPortNumber $tgt_port
 }
 ```
