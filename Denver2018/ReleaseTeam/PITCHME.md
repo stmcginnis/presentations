@@ -1,7 +1,7 @@
 @title[Introduction]
 
 # OpenStack Release Team
-## What we do, and why we're not actually just here to annoy you
+### What we do, and why we're not actually just here to annoy you
 
 ---
 @title[What is the Release Team]
@@ -43,9 +43,9 @@
 ---
 @title[Cycle with Milestones]
 
-## Cycle with Milestones
+### Cycle with Milestones
 
-One main deliverable per release cycle.
+One main deliverable per release cycle
 
 - Nova
 - Cinder
@@ -55,7 +55,7 @@ One main deliverable per release cycle.
 ---
 @title[Cycle with Intermediary]
 
-## Cycle with Intermediary
+### Cycle with Intermediary
 
 Updates throughout development cycle or low volume of change
 
@@ -67,7 +67,7 @@ Updates throughout development cycle or low volume of change
 ---
 @title[Cycle Trailing]
 
-## Cycle Trailing
+### Cycle Trailing
 
 Projects that need output from other deliverables
 
@@ -79,7 +79,7 @@ Projects that need output from other deliverables
 ---
 @title[Independent]
 
-## Independent
+### Independent
 
 Not tied to specific release cycle
 
