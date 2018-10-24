@@ -1,0 +1,7 @@
+logo: Berlin2018/ReleaseTeam/assets/mascot.png
+highlight: idea
+remote-control: true
+theme: white
+theme-override: Berlin2018/ReleaseTeam/assets/custom.css
+background-color: #d7e3f7
+footnote: "OpenStack Release Management Onboarding - Berlin 2018"

@@ -1,0 +1,46 @@
+#gp-logo {
+    width: 10%;
+    height: auto;
+}
+
+#gp-logo img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    max-width: none;
+}
+
+.reveal div.pre {
+    font-size:0.3em;
+    font-family:Consolas,"Lucida Console","Courier New";
+    text-align: left;
+    padding: 8px;
+    white-space:pre;
+    background-color: #232729;
+    color: white;
+    border: 1px solid black;
+}
+
+.file {
+    color: #81d234;
+    font-weight: bold;
+}
+
+.folder {
+    color: #6f9ac7;
+    font-weight: bold;
+}
+
+.reveal div.column {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+.reveal div.column1 {
+    float: left;
+    width: 30%;
+}
+.reveal div.column2 {
+    float: left;
+    width: 70%;
+}
