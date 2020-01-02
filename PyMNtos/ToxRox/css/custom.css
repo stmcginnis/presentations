@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+}
+.col {
+    flex: 1;
+}
+
+.footer-link {
+    font-size: 0.5em;
+}

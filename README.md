@@ -10,6 +10,7 @@ a pull request if you see anything that needs fixing!
 * [OpenStack PTG - Denver 2018](Denver2018/README.md)
 * [OpenStack Summit - Berlin 2018](Berlin2018/README.md)
 * [PyMNtos - Minnesota Python Users group](PyMNtos/README.md)
+* [FOSDEM](FOSDEM/README.md)
 
 
 > Feel free to use these presentations, in full or as a starting point for
