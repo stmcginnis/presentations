@@ -166,6 +166,28 @@ branches:
 
 ---
 
+### Release Request
+
+```yaml
+launchpad: spam
+team: 'Flying Circus'
+type: library
+release-model: cycle-with-intermediary
+repository-settings:
+  openstack/spam:
+    tarball-base: openstack-spam
+releases:
+  - projects:
+      - hash: 3da9679d9b12e2808ce9d073117e93d40ce05da3
+        repo: openstack/spam
+    version: 1.1.0
+branches:
+  - location: 1.1.0
+    name: stable/rocky
+```
+
+---
+
 ### Release Request - New-Release Command
 
 ```bash
@@ -228,29 +250,6 @@ releases:
 
 ---
 
-### Check and Gate Pipelines
-
-* Build Docs
-* Validation Checks
-* List Changes (check only)
-
----
-
-### Release-Post Pipeline
-
-* Publish Docs
-* Tag Release
-
----
-
-### Release Pipeline
-
-* Propose Requirements Patches
-* Project-Specific Release (PyPi, PuppetForge, etc.)
-* Send Release Announcement
-
----
-
 ### Release Requests
 
 <div class="container">
@@ -301,13 +300,6 @@ CI job builds docs to ensure no errors with the information in the files.
 * Generate example release announcement text
 
 [https://opendev.org/openstack/releases/src/branch/master/openstack_releases/cmds/list-changes.py](https://opendev.org/openstack/releases/src/branch/master/openstack_releases/cmds/list-changes.py) <!-- .element: class="footer-link" -->
-
----
-
-### Post-Release Queue - Approved Release Request
-
-* Publish Docs
-* Tag Release
 
 ---
 
@@ -362,6 +354,12 @@ CI job builds docs to ensure no errors with the information in the files.
 
 * Send email to mailing list
 * Send message to Slack, IRC, etc.
+
+---
+
+### Zuul Pipelines
+
+![Workflow](img/flow.png "Workflow")
 
 ---
 
