@@ -17,6 +17,26 @@
 
 ---
 
+### Baseboard Management Controller
+
+A BMC is a **system on a chip** that integrates various computer components in
+a single die/package, roughly similar to the Broadcom SoC found on a Raspberry
+Pi, except the BMC runs within a server/chassis/switch/JBOD/JBOF with its own
+OS/Firmware.
+
+---
+
+### Asset Lifecycle Management
+
+* Out of band access to servers/switches/JBODS, etc
+* Last resort to power cycle, reboot, hard reset
+* IPMI/VNC/iKVM/Serial console access
+* Inventory information
+* Hardware logs
+* Root of trust
+
+---
+
 ### Redfish Overview
 
 * Built off of capabilities of IPMI, SMASH, etc.
@@ -172,26 +192,6 @@ bootOverride := redfish.Boot{
 #### A Baseboard Managment Controller library
 
 ![BMC-Toolbox](img/bmc-toolbox.png "bmc-toolbox logo") <!-- .element: style="background:none; border:none; box-shadow:none;" -->
-
----
-
-### Baseboard Management Controller
-
-A BMC is a **system on a chip** that integrates various computer components in
-a single die/package, roughly similar to the Broadcom SoC found on a Raspberry
-Pi, except the BMC runs within a server/chassis/switch/JBOD/JBOF with its own
-OS/Firmware.
-
----
-
-### Asset Lifecycle Management
-
-* Out of band access to servers/switches/JBODS, etc
-* Last resort to power cycle, reboot, hard reset
-* IPMI/VNC/iKVM/Serial console access
-* Inventory information
-* Hardware logs
-* Root of trust
 
 ---
 
