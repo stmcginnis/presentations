@@ -1,10 +1,12 @@
-# Tox Rox
+# Publishing Packages to PyPi
 
-This is a presentation on the basics of using ``tox`` for Python projects.
+This gives a walk through of the basics for publishing packages to the Python
+Package Index (PyPi), along with some tips and tricks that can help along the
+way.
 
 The presentation can be given by either running a web server locally, or by
 going to [my
-site](http://www.ivehearditbothways.com/presentations/PyMNtos/ToxRox/index.html)
+site](http://www.ivehearditbothways.com/presentations/PyMNtos/Publishing/index.html)
 to view.
 
 To view locally, from the local directory, run one of the following:
@@ -18,7 +20,7 @@ npm start
 or
 
 ```
-python -m SimpleHTTPServer
+python3 -m http.server
 ```
 
 ### Presentation License

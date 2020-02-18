@@ -11,3 +11,4 @@ Group](https://www.meetup.com/PyMNtos-Twin-Cities-Python-User-Group/)
 ## Presentations
 
 * [Tox Rox](http://www.ivehearditbothways.com/presentations/PyMNtos/ToxRox/index.html)
+* [Publishing Packages to PyPi](http://www.ivehearditbothways.com/presentations/PyMNtos/Publishing/index.html)
